@@ -14,9 +14,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelReader {
 	
 	public String getCellInfo(String excelName, int sheetNumber, int rowNumber, int colNumber) throws IOException {
+		/* bad pathway */
 		File excelfile = new File("C:/Eclipse/resultat_" + excelName + ".xlsx");
 		FileInputStream fis = new FileInputStream(excelfile);
-		
+
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 

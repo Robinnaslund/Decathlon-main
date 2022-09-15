@@ -49,6 +49,7 @@ public class ExcelPrinter {
 	}
 
 	public void write() throws IOException {
+		/* bad pathway */
 		FileOutputStream out = new FileOutputStream("C:/Eclipse/resultat_" + excelName + ".xlsx");
 		workbook.write(out);
 		workbook.close();
