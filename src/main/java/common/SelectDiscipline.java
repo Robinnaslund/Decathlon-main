@@ -24,8 +24,13 @@ import heptathlon.HeptShotPut;
 public class SelectDiscipline {
 
 	int disciplineSelected;
+
+	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
+
 	Scanner sc = new Scanner(System.in);
+
+	//Skapar objekt av klasserna som finns i decathlon mappen
 	Deca100M deca100M = new Deca100M();
 	Deca400M deca400M = new Deca400M();
 	Deca110MHurdles deca110MHurdles = new Deca110MHurdles();
@@ -37,6 +42,7 @@ public class SelectDiscipline {
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
 	DecaPoleVault poleVault = new DecaPoleVault();
 
+	//Skapar objekt av klasserna som finns i hepatathlon mappen
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();
 	Hep100MHurdles hep100MHurdles = new Hep100MHurdles();
@@ -45,12 +51,12 @@ public class SelectDiscipline {
 	HeptShotPut hepShotPut = new HeptShotPut();
 	HeptJavelinThrow hepJavelinThrow = new HeptJavelinThrow();
 	
-	//Receive input	of selection of discipline.
-
+      // En metod för att ta emot input för val av disciplin.
 	public void inputSelection() {
 		System.out.println("Select discipline.");
 		printDisciplines();
 
+		//Om något går utanför det normala flödet i programmet
 		try {
 
 			disciplineSelected = Integer.parseInt(sc.nextLine());
@@ -64,9 +70,11 @@ public class SelectDiscipline {
 
 	}
 
-	// Check input of discipline.
+	// Kontrollerar inmatning av disciplin.
 	public void makeSelection() {
 		switch (disciplineSelected) {
+			//Operationerna utförs om de har samma värde som disciplineSelected
+			//Metoden calculateResult finns i de olika klasserna nedan, den Beräknar poängen baserat på t.ex tid, avstånd, höjd, m.m
 		case 1:
 			deca100M.calculateResult(inputResult.enterResult());
 			break;
