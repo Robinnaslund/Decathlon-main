@@ -20,6 +20,7 @@ public class Deca1500M {
 
 			try {
 				// Acceptable values.
+				//Om körtiden är mindre än 2
 				if (runningTime < 2) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();

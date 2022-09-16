@@ -20,6 +20,7 @@ public class DecaShotPut {
 
 			try {
 				// Acceptable values.
+				//Om distansen är mindre än 0
 				if (distance < 0) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();

@@ -10,7 +10,11 @@ public class DecaDiscusThrow {
 	private double B = 4;
 	private double C = 1.1;
 	boolean active = true;
+
+	//Skapar objekt av klassen CalcTrackAndField
 	CalcTrackAndField calc = new CalcTrackAndField();
+
+	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on distance and height. Measured in meters.
@@ -20,6 +24,7 @@ public class DecaDiscusThrow {
 
 			try {
 				// Acceptable values.
+				//Om distansen är mindre än 0
 				if (distance < 0) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();

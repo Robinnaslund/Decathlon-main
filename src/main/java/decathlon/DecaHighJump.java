@@ -10,7 +10,11 @@ public class DecaHighJump {
 	private double B = 75;
 	private double C = 1.42;
 	boolean active = true;
+
+	//Skapar objekt av klassen CalcTrackAndField
 	CalcTrackAndField calc = new CalcTrackAndField();
+
+	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on distance and height. Measured in centimeters.
@@ -20,6 +24,7 @@ public class DecaHighJump {
 
 			try {
 				// Acceptable values.
+				//Om distansen är mindre än 0
 				if (distance < 0) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();
