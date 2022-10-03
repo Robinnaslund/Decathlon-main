@@ -26,4 +26,5 @@ public class Main {
 		}
 		choice = false;
 	}
+	// lite små ändringar
 }
