@@ -1,28 +1,82 @@
 package common;
 
+import decathlon.Deca100M;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-class InputNameTest {
+public class InputNameTest {
 
     @Test
-    public void addCompetitior()
-    {
+    public void addCompetitorName() {
         //Arrange
 
-        //Pet dog = new Pet (”Karo”);
+        InputName addComp = new InputName();
 
         //Act
 
-        //String petName = dog.getName();
+
+        addComp.addCompetitor("Camilla");
+        String actual = addComp.readCompetitorName();
+
+
+        //Assert
+        String expected = "Camilla";
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void validateInputCorrectInput() {
+        //Arrange
+
+        InputName addComp = new InputName();
+
+        //Act
+
+        boolean actual = addComp.validateNameData("Camilla");
 
 
         //Assert
 
-        //assertEquals (expected “Karo”, petName);
+        assertEquals(true, actual);
 
     }
 
+    @Test
+    public void validateInputNonValidInput() {
+        //Arrange
+
+        InputName addComp = new InputName();
+
+        //Act
+
+        boolean actual = addComp.validateNameData("102");
+
+
+        //Assert
+
+        assertEquals(false, actual);
+
+    }
+
+   /* @Test
+    public void addCompetitorNameInvalidCharacters() {
+        //Arrange
+
+        InputName addComp = new InputName();
+
+        //Act
+
+
+        addComp.addCompetitor("Camill09");
+        String actual = addComp.readCompetitorName();
+
+
+        //Assert
+        String expected = "";
+        assertEquals(expected, actual);
+
+    }*/
 }
 
 

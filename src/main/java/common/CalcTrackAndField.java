@@ -22,3 +22,4 @@ public class CalcTrackAndField {
 	}
 
 }
+ /* Ändra alla variabler till passande namn. Skall enkelt gå att skilja dom två ekvationerna åt.*/

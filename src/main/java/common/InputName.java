@@ -1,35 +1,38 @@
 package common;
 
-import java.util.Scanner;
-
 public class InputName {
 
 	//Definierar tillstånden/attributen
-	String compName = "";
-
+	String compName = ""; // tävlandes namn sparad i en String
 
 
 	//Lägg till konkurrent
 	//Definierar metoderna
-	public String addCompetitor() {
+	// sparar användarnamn (competitorName) till attributet compName
+	public void addCompetitor(String competitorName) {
 
-		boolean active = true;
-		String compName = "";
-		Scanner sc = new Scanner(System.in);
+			compName = competitorName;
+	}
 
-		//Loopen körs så länge det är "active"
-		while (active) {
-			System.out.println("Please enter the competitor's name:");
-			compName = sc.nextLine();
-			//Inmatningen ska vara skilt ifrån .*[a-öA-ö], annars får man fel meddelande
-			if (!compName.matches(".*[a-öA-ö]")) {
-				System.out.println("Only use letters when putting in competitors name.");
-
-			} else {
-				active = false;
-			}
-
-		} 
+	// returnerar sparad String från attribut compName
+	public String readCompetitorName(){
 		return compName;
-	} 
+	}
+
+	// validerar String input. returnerar booleanvärde.
+	public boolean validateNameData(String competitorName) {
+
+		boolean validatedCompetitorName= false;
+
+		//Inmatningen ska vara skilt ifrån.*[a-öA-ö], annars får man fel meddelande
+		if (!competitorName.matches(".*[a-öA-ö]")) {
+			System.out.println("Only use letters when putting in competitors name.");
+
+		} else {
+			validatedCompetitorName = true;
+		}
+
+		return validatedCompetitorName;
+
+	}
 }
