@@ -5,23 +5,24 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class CalcTrackAndFieldTest {
+public class CalcTrackAndFieldTest {
 
     @Test
-    public void addCompetitior()
+    public void testCalculateTrack()
     {
         //Arrange
-
-        //Pet dog = new Pet (”Karo”);
+        double A = 25.4347;
+        double B = 18;
+        double C = 1.81;
+        double time =  11.0;
+        CalcTrackAndField calc = new CalcTrackAndField();
 
         //Act
-
-        //String petName = dog.getName();
-
+        int actual = calc.calculateTrack(A, B, C, time);
 
         //Assert
-
-        //assertEquals (expected “Karo”, petName);
+        int expected = 861;
+        assertEquals (expected, actual);
 
     }
 }
