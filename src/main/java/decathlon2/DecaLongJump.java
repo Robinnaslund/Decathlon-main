@@ -1,29 +1,30 @@
-package decathlon;
+package decathlon2;
 
-import common.CalcTrackAndField;
-import common.InputResult;
+import common.*;
 
-public class DecaJavelinThrow {
+public class DecaLongJump {
 
 	private int score;
-	private double A = 10.14;
-	private double B = 7;
-	private double C = 1.08;
+	private double A = 0.14354;
+	private double B = 220;
+	private double C = 1.4;
 	boolean active = true;
 	CalcTrackAndField calc = new CalcTrackAndField();
 	InputResult inputResult = new InputResult();
 
-	// Calculate the score based on distance and height. Measured in meters.
+	// Calculate the score based on distance and height. Measured in centimetres.
 	public void calculateResult(double distance) {
 
 		while (active) {
 
 			try {
 				// Acceptable values.
-				if (distance < 0) {
+				//Om distansen är mindre än 250
+				if (distance < 250) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();
-				} else if (distance > 110) {
+				} else if (distance > 1000) {
+
 					System.out.println("Value too high");
 					distance = inputResult.enterResult();
 
@@ -38,7 +39,6 @@ public class DecaJavelinThrow {
 			}
 		}
 		System.out.println("The result is: " + score);
-
 	}
 
 }

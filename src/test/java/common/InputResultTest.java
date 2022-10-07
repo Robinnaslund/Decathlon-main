@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class InputResultTest {
 
-    @Test
+   /* @Test
     public void addCompetitorName() {
 
         //Arrange
@@ -25,7 +25,7 @@ public class InputResultTest {
         //Assert
         double expected = 11.0;
         Assertions.assertEquals(expected, actual);
-    }
+    }*/
 
 
 }

@@ -1,38 +1,39 @@
-package decathlon;
+package decathlon2;
 
-import common.*;
+import common.CalcTrackAndField;
+import common.InputResult;
 
-public class DecaPoleVault {
+public class DecaDiscusThrow {
 
 	private int score;
-	private double A = 0.2797;
-	private double B = 100;
-	private double C = 1.35;
+	private double A = 12.91;
+	private double B = 4;
+	private double C = 1.1;
 	boolean active = true;
 
+	//Skapar objekt av klassen CalcTrackAndField
 	CalcTrackAndField calc = new CalcTrackAndField();
+
+	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
 
-	// Calculate the score based on distance and height. Measured in centimetres.
+	// Calculate the score based on distance and height. Measured in meters.
 	public void calculateResult(double distance) {
 
 		while (active) {
 
 			try {
 				// Acceptable values.
-				//Om distansen är mindre än 2
-				if (distance < 2) {
+				//Om distansen är mindre än 0
+				if (distance < 0) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();
-
-				} else if (distance > 1000) {
-
+				} else if (distance > 85) {
 					System.out.println("Value too high");
 					distance = inputResult.enterResult();
-
 				} else {
-
 					score = calc.calculateField(A, B, C, distance);
+
 					active = false;
 				}
 			} catch (Exception e) {
@@ -41,6 +42,7 @@ public class DecaPoleVault {
 			}
 		}
 		System.out.println("The result is: " + score);
+
 	}
 
 }

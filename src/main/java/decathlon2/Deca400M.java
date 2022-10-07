@@ -1,37 +1,34 @@
-package decathlon;
+package decathlon2;
 
 import common.*;
 
-public class Deca110MHurdles {
+public class Deca400M {
 
-	//Definierar tillstånden/attributen
 	private int score;
-	private double A = 5.74352;
-	private double B = 28.5;
-	private double C = 1.92;
+	private double A = 1.53775;
+	private double B = 82;
+	private double C = 1.81;
 	boolean active = true;
 
-	//Skapar objekt av klassen CalcTrackAndField
 	CalcTrackAndField calc = new CalcTrackAndField();
-
-	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
 
-	// Beräkna poängen baserat på tid. Alla löparevenemang.
+	// Calculate the score based on time. All running events.
 	public void calculateResult(double runningTime) {
 
 		while (active) {
 
 			try {
 				// Acceptable values.
-				//Om körtiden är mindre än 10
-				if (runningTime < 10) {
+				//Om körtiden är mindre än 20
+				if (runningTime < 20) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
-				} else if (runningTime > 28.5) {
+				} else if (runningTime > 100) {
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} else {
+
 					score = calc.calculateTrack(A, B, C, runningTime);
 					active = false;
 				}
@@ -40,7 +37,7 @@ public class Deca110MHurdles {
 				System.out.println("Please enter numbers");
 			}
 		}
-		System.out.println("The result is " + score);
+		System.out.println("The result is: " + score);
 
 	}
 

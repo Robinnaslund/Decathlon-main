@@ -1,13 +1,13 @@
-package decathlon;
+package decathlon2;
 
 import common.*;
 
-public class Deca400M {
+public class Deca1500M {
 
 	private int score;
-	private double A = 1.53775;
-	private double B = 82;
-	private double C = 1.81;
+	private double A = 0.03768;
+	private double B = 480;
+	private double C = 1.85;
 	boolean active = true;
 
 	CalcTrackAndField calc = new CalcTrackAndField();
@@ -20,11 +20,11 @@ public class Deca400M {
 
 			try {
 				// Acceptable values.
-				//Om körtiden är mindre än 20
-				if (runningTime < 20) {
+				//Om körtiden är mindre än 2
+				if (runningTime < 2) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
-				} else if (runningTime > 100) {
+				} else if (runningTime > 7) {
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} else {

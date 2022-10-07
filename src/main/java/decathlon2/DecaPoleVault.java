@@ -1,14 +1,15 @@
-package decathlon;
+package decathlon2;
 
 import common.*;
 
-public class DecaLongJump {
+public class DecaPoleVault {
 
 	private int score;
-	private double A = 0.14354;
-	private double B = 220;
-	private double C = 1.4;
+	private double A = 0.2797;
+	private double B = 100;
+	private double C = 1.35;
 	boolean active = true;
+
 	CalcTrackAndField calc = new CalcTrackAndField();
 	InputResult inputResult = new InputResult();
 
@@ -19,10 +20,11 @@ public class DecaLongJump {
 
 			try {
 				// Acceptable values.
-				//Om distansen är mindre än 250
-				if (distance < 250) {
+				//Om distansen är mindre än 2
+				if (distance < 2) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();
+
 				} else if (distance > 1000) {
 
 					System.out.println("Value too high");

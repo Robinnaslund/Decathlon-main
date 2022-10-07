@@ -1,20 +1,16 @@
-package decathlon;
+package decathlon2;
 
 import common.CalcTrackAndField;
 import common.InputResult;
 
-public class DecaDiscusThrow {
+public class DecaShotPut {
 
 	private int score;
-	private double A = 12.91;
-	private double B = 4;
-	private double C = 1.1;
+	private double A = 51.39;
+	private double B = 1.5;
+	private double C = 1.05;
 	boolean active = true;
-
-	//Skapar objekt av klassen CalcTrackAndField
 	CalcTrackAndField calc = new CalcTrackAndField();
-
-	//Skapar objekt av klassen InputResult
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on distance and height. Measured in meters.
@@ -28,12 +24,13 @@ public class DecaDiscusThrow {
 				if (distance < 0) {
 					System.out.println("Value too low");
 					distance = inputResult.enterResult();
-				} else if (distance > 85) {
+				} else if (distance > 30) {
+
 					System.out.println("Value too high");
 					distance = inputResult.enterResult();
 				} else {
-					score = calc.calculateField(A, B, C, distance);
 
+					score = calc.calculateField(A, B, C, distance);
 					active = false;
 				}
 			} catch (Exception e) {
