@@ -44,13 +44,14 @@ public class Discipline {
         }
 
         // Beräkna poängen baserat på tid. Alla löparevenemang.
-        public void calculateResult ( double runningTimeOrDistance, boolean isTrackDiscipline){
+        public void calculateResult (double runningTimeOrDistance){
 
             double valueA = decaMatrix[choiceOfDiscipline - 1][0];
             double valueB = decaMatrix[choiceOfDiscipline - 1][1];
             double valueC = decaMatrix[choiceOfDiscipline - 1][2];
 
-            if (isTrackDiscipline) {
+            if (choiceOfDiscipline<5 || (choiceOfDiscipline >10 && choiceOfDiscipline <14)) {
+
                 score = calc.calculateTrack(valueA, valueB, valueC, runningTimeOrDistance);
 
             } else {
@@ -64,6 +65,5 @@ public class Discipline {
 
             return score;
         }
-
 
     }

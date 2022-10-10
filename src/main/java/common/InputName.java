@@ -20,13 +20,14 @@ public class InputName {
 	}
 
 	// validerar String input. returnerar booleanvärde.
-	public boolean validateNameData(String competitorName) {
+	public boolean validateNameInput(String competitorName) {
 
 		boolean validatedCompetitorName= false;
 
 		//Inmatningen ska vara skilt ifrån.*[a-öA-ö], annars får man fel meddelande
 		if (!competitorName.matches(".*[a-öA-ö]")) {
 			System.out.println("Only use letters when putting in competitors name.");
+			System.out.println("PLease type again: ");
 
 		} else {
 			validatedCompetitorName = true;
@@ -34,5 +35,9 @@ public class InputName {
 
 		return validatedCompetitorName;
 
+	}
+
+	public String getCompName(){
+		return compName;
 	}
 }

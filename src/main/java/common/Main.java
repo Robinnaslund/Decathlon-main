@@ -7,28 +7,40 @@ import java.util.Scanner;
 //Denna klass läser in text och skriver ut resultatet
 public class Main {
 
-	public static void main(String[] args) {
-		boolean choice = true;
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-		//Loopen körs så länge choise är sant
-		while (choice = true) {
+        System.out.println("Please enter the competitor's name:");
+        //Skapar objekt av klassen InputName
+        InputName inputName = new InputName();
+        String competitorName = scan.nextLine();
 
-			//Skapar objekt av klassen InputName
-			InputName inputName = new InputName();
+        // validate input
+        // continue asking until input is valid
+        while (!inputName.validateNameInput(competitorName)) {
 
-			//Anropar metoden addCompetitor från InputName klassen
-            System.out.println("Please enter the competitor's name:");
-            inputName.addCompetitor(scan.nextLine());
+            competitorName = scan.nextLine();
 
-			//Skapar objekt av klassen SelectDiscipline
-			SelectDiscipline selectDiscipline = new SelectDiscipline();
+        }
+        inputName.addCompetitor(competitorName);
 
-			//Anropar metoden inputSelection från selectDiscipline klassen
-			selectDiscipline.inputSelection();
+        Discipline decaHepta = new Discipline();
 
-		}
-		choice = false;
-	}
-	// lite små ändringar
+        System.out.println("Below is a list of all disciplines, write in corresponding number for your choice.");
+        System.out.println("Choose discipline: (by typing in one number between 1-17) ");
+        decaHepta.setChoiceOfDiscipline(Integer.parseInt(scan.nextLine()));
+
+        InputResult inputResult = new InputResult();
+        System.out.println("Type in result to calculate gained score:");
+        inputResult.enterResult(Double.parseDouble(scan.nextLine()));
+
+        decaHepta.calculateResult(inputResult.returnResult());
+
+        System.out.println("Here is what will be saved.");
+        System.out.println("The competitor name is: "+ inputName.getCompName());
+        System.out.println("The entered result is: "+ inputResult.returnResult());
+        System.out.println("The score gained is: "+ decaHepta.getScore());
+
+    }
+
 }
