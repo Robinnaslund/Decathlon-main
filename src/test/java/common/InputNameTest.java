@@ -28,7 +28,7 @@ public class InputNameTest {
         InputName addComp = new InputName();
 
         //Act
-        boolean actual = addComp.validateNameData("Camilla");
+        boolean actual = addComp.validateNameInput("Camilla");
 
 
         //Assert
@@ -42,7 +42,7 @@ public class InputNameTest {
         InputName addComp = new InputName();
 
         //Act
-        boolean actual = addComp.validateNameData("102");
+        boolean actual = addComp.validateNameInput("102");
 
         //Assert
         assertEquals(false, actual);
@@ -57,7 +57,7 @@ public class InputNameTest {
         InputName addComp = new InputName();
 
         //Act
-        boolean actual = addComp.validateNameData("Camill09");
+        boolean actual = addComp.validateNameInput("Camill09");
 
         //Assert
        assertEquals(false, actual);
