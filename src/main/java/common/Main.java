@@ -38,7 +38,7 @@ public class Main {
         decaHepta.calculateResult(inputResult.returnResult());
 
         System.out.println("Here is what will be saved.");
-        System.out.println("The competitor name is: "+ inputName.getCompName());
+        System.out.println("The competitor name is: "+ inputName.readCompetitorName());
         System.out.println("The entered result is: "+ inputResult.returnResult());
         System.out.println("The score gained is: "+ decaHepta.getScore());
 
