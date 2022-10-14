@@ -27,6 +27,7 @@ public class Main {
         Discipline decaHepta = new Discipline();
 
         System.out.println("Below is a list of all disciplines, write in corresponding number for your choice.");
+        decaHepta.printDisciplines();
         System.out.println("Choose discipline: (by typing in one number between 1-17) ");
         decaHepta.setChoiceOfDiscipline(Integer.parseInt(scan.nextLine()));
 

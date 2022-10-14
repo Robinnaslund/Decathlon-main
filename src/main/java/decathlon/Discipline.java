@@ -66,4 +66,24 @@ public class Discipline {
             return score;
         }
 
+    public void printDisciplines() {
+        System.out.println("1. Decathlon 100 meters. (Measured in seconds)");
+        System.out.println("2. Decathlon 400 meters. (Measured in seconds)");
+        System.out.println("3. Decathlon 110 meters hurdles. (Measured in seconds)");
+        System.out.println("4. Decathlon 1500 meters. (Measured in minutes and seconds)");
+        System.out.println("5. Decathlon Long Jump. (Measured in centimeters)");
+        System.out.println("6. Decathlon High Jump. (Measured in centimeters)");
+        System.out.println("7. Decathlon Pole Vault. (Measured in centimeters)");
+        System.out.println("8. Decathlon Discus Throw. (Measured in meters)");
+        System.out.println("9. Decathlon Javelin Throw. (Measured in meters)");
+        System.out.println("10. Decathlon Shot Put. (Measured in meters)");
+        System.out.println("11. Heptathlon 200 meters.");
+        System.out.println("12. Heptathlon 800 meters.");
+        System.out.println("13. Heptathlon 100 meters hurdles.");
+        System.out.println("14. Heptathlon High Jump.");
+        System.out.println("15. Heptathlon Long Jump.");
+        System.out.println("16. Heptathlon Shot Put.");
+        System.out.println("17. Heptathlon Javelin Throw.");
+    }
+
     }
