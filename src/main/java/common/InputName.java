@@ -24,12 +24,12 @@ public class InputName {
 
 		boolean validatedCompetitorName= false;
 
-		//Inmatningen ska vara skilt ifrån.*[a-öA-ö], annars får man fel meddelande
-		if (!competitorName.matches(".*[a-öA-ö]")) {
+		//Inmatningen tillåter endast små och stora bokstäver
+		if (!competitorName.matches("^[a-öA-ö]{2,20}$")) {
 			System.out.println("Only use letters when putting in competitors name.");
 			System.out.println("PLease type again: ");
-
-		} else {
+		}
+		else {
 			validatedCompetitorName = true;
 		}
 

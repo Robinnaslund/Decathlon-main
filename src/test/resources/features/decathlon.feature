@@ -10,10 +10,10 @@ Feature: Decathlon
 
 
     Examples:
-      | name | | discipline       | result | score  errormessage  |
-      |      |    Long Jump"      |    220 |     0 |              |
-      |      |   "Long Jump"      |    250 |    16 |              |
-      |      |   "Long Jump"      |   1000 |  1606 |              |
-      |      |  "Decathlon 100M"  |    250 |    16 |              |
-      |      | "Decathlon 100M"   |    220 |     0 |              |
-      |      |  "Decathlon 100M"  |   1000 |  1606 |              |
+      | name    | | discipline       | result | score | errormessage |
+      |Dunia    |    Long Jump"      |    220 |     0 |              |
+      |Tommi    |   "Long Jump"      |    250 |    16 |              |
+      |Camilla  |   "Long Jump"      |   1000 |  1606 |              |
+      |Robin    |  "Decathlon 100M"  |    250 |    16 |              |
+      |Bella    | "Decathlon 100M"   |    220 |     0 |              |
+      |Christer |  "Decathlon 100M"  |   1000 |  1606 |              |

@@ -6,14 +6,14 @@ import common.*;
 public class Discipline {
 
     //Definierar tillstånden/attributen
-    private double[][] decaMatrix;
+    private double[][] matrix;
     int score = 0;
     int choiceOfDiscipline = 0;
 
     //Definiera konstruktorn, inparametrar som konstruktorn behöver är de attributen som objektet ska få.
     public Discipline() {
         //Deklarera en flerdimensionell array, stoppar in alla decathlon värden/attributen i
-        decaMatrix = new double[][]{
+        matrix= new double[][]{
                 {25.4347, 18, 1.81},  //Deca100M
                 {5.74352, 28.5, 1.92},  //Deca110MHurdles
                 {1.53775, 82, 1.81},    //Deca400M
@@ -34,6 +34,8 @@ public class Discipline {
 
         }
 
+
+
         //Skapar objekt av klassen CalcTrackAndField
         CalcTrackAndField calc = new CalcTrackAndField();
 
@@ -46,9 +48,9 @@ public class Discipline {
         // Beräkna poängen baserat på tid. Alla löparevenemang.
         public void calculateResult (double runningTimeOrDistance){
 
-            double valueA = decaMatrix[choiceOfDiscipline - 1][0];
-            double valueB = decaMatrix[choiceOfDiscipline - 1][1];
-            double valueC = decaMatrix[choiceOfDiscipline - 1][2];
+            double valueA = matrix[choiceOfDiscipline - 1][0];
+            double valueB = matrix[choiceOfDiscipline - 1][1];
+            double valueC = matrix[choiceOfDiscipline - 1][2];
 
             if (choiceOfDiscipline<5 || (choiceOfDiscipline >10 && choiceOfDiscipline <14)) {
 
@@ -86,4 +88,9 @@ public class Discipline {
         System.out.println("17. Heptathlon Javelin Throw.");
     }
 
+
+    public int getChoiceOfDiscipline() {
+        return choiceOfDiscipline;
     }
+
+}
