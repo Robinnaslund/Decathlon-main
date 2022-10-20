@@ -3,11 +3,17 @@ package common;
 import decathlon.*;
 
 import java.util.Scanner;
-
+import java.util.HashMap;
 //Denna klass läser in text och skriver ut resultatet
 public class Main {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+
+       //Vilken Tävling?
+       //DECA or HEPTA?
+       // if hepta Discipline = new Hepta();
+       // else Discipline = new Deca();
+       /*
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Please enter the competitor's name:");
@@ -41,7 +47,7 @@ public class Main {
         System.out.println("The competitor name is: "+ inputName.readCompetitorName());
         System.out.println("The entered result is: "+ inputResult.returnResult());
         System.out.println("The score gained is: "+ decaHepta.getScore());
-
+*/
     }
 
 }

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DisciplineTest {
 
-    @Test
+    /*@Test
     public void calculateScoreTrackDiscipline(){
 
     //arrange
@@ -139,6 +139,6 @@ public class DisciplineTest {
         //assert
         String expected = "Please input numbers as result";
         assertEquals(expected,actual);
-    }
+    }*/
 
 }
