@@ -100,4 +100,22 @@ public class CalcTrackAndFieldTest {
         assertEquals (expected, actual);
 
     }
+    @Test
+    public void testCalculateDeca800Mt()
+    {
+        //Arrange
+        double A = 0.11193;
+        double B = 254;
+        double C = 1.88;
+        double time =  127.63;
+        CalcTrackAndField calc = new CalcTrackAndField();
+
+        //Act
+        int actual = calc.calculateTrack(A, B, C, time);
+
+        //Assert
+        int expected = 1000;
+        assertEquals (expected, actual);
+
+    }
 }

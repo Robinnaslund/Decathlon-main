@@ -9,7 +9,7 @@ public class InputNameTest {
     @Test
     public void addCompetitorName() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         addComp.addCompetitor("Camilla");
@@ -25,7 +25,7 @@ public class InputNameTest {
     @Test
     public void validateInputCorrectInput() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         boolean actual = addComp.validateNameInput("Camilla");
@@ -39,7 +39,7 @@ public class InputNameTest {
     @Test
     public void validateInputNonValidInput() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         boolean actual = addComp.validateNameInput("102");
@@ -54,7 +54,7 @@ public class InputNameTest {
    @Test
     public void addCompetitorNameInvalidCharacters() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         boolean actual = addComp.validateNameInput("Camill09");
@@ -69,7 +69,7 @@ public class InputNameTest {
     @Test
     public void emptyInput() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         addComp.addCompetitor("");
@@ -87,7 +87,7 @@ public class InputNameTest {
     @Test
     public void  longName() {
         //Arrange
-        InputName addComp = new InputName();
+        Competitor addComp = new Competitor();
 
         //Act
         addComp.addCompetitor("DuniaCamillaRobinTommiochhelaklassentestarvihär");

@@ -20,7 +20,7 @@ public class Discipline {
     }
 
     // Beräkna poängen baserat på tid. Alla löparevenemang.
-    public void calculateResult(double runningTimeOrDistance, String competition) {
+    public void calculateScore(double runningTimeOrDistance, String competition) {
 
         double valueA = calculatingScoreValues[choiceOfDiscipline - 1][0];
         double valueB = calculatingScoreValues[choiceOfDiscipline - 1][1];

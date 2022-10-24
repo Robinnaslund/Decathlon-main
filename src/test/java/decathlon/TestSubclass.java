@@ -1,13 +1,9 @@
 package decathlon;
-import decathlon.DecaSub;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import decathlon.Discipline;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import java.util.Arrays;
 
 
 public class TestSubclass {
@@ -50,7 +46,7 @@ public class TestSubclass {
         double runningTime100Meters = 11.0;
         int choiceOfDiscipline = 1;
         deca100.setChoiceOfDiscipline(choiceOfDiscipline);
-        deca100.calculateResult(runningTime100Meters, "deca");
+        deca100.calculateScore(runningTime100Meters, "deca");
 
         double actual= deca100.getScore();
         System.out.println(actual);

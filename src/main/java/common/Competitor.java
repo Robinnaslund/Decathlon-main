@@ -1,14 +1,15 @@
 package common;
 
-public class InputName {
+public class Competitor {
 
 	//Definierar tillstånden/attributen
 	String compName = ""; // tävlandes namn sparad i en String
-
+	//int[] scores = [];
 
 	//Lägg till konkurrent
 	//Definierar metoderna
 	// sparar användarnamn (competitorName) till attributet compName
+
 	public void addCompetitor(String competitorName) {
 
 		compName = competitorName;

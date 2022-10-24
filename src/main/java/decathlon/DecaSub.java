@@ -2,8 +2,6 @@ package decathlon;
 
 
 public class DecaSub extends Discipline {
-
-
     public DecaSub() {
 
         calculatingScoreValues = new double[][]{
@@ -18,6 +16,4 @@ public class DecaSub extends Discipline {
                 {0.2797, 100, 1.35},    //DecaPoleVault
                 {51.39, 1.5, 1.05}};        //DecaShotPut
     }
-
-
 }

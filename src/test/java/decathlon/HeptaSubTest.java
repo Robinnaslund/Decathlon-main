@@ -1,9 +1,5 @@
 package decathlon;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import decathlon.DecaSub;
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -64,7 +60,7 @@ public class HeptaSubTest {
         double heigtHighJump = 182;
         int choiceOfDiscipline = 4;
         heptaHighJump.setChoiceOfDiscipline(choiceOfDiscipline);
-        heptaHighJump.calculateResult(heigtHighJump, "hepta");
+        heptaHighJump.calculateScore(heigtHighJump, "hepta");
 
         double actual = heptaHighJump.getScore();
         System.out.println(actual);
@@ -77,15 +73,16 @@ public class HeptaSubTest {
     public void calculateScoreHeptaLongJump() {
 
         //arrange
-        HeptaSub heptaHighJump = new HeptaSub();
+        HeptaSub heptaLongJump = new HeptaSub();
 
         //act
-        double heigtHighJump = 648;
-        int choiceOfDiscipline = 6;
-        heptaHighJump.setChoiceOfDiscipline(choiceOfDiscipline);
-        heptaHighJump.calculateResult(heigtHighJump, "hepta");
 
-        double actual = heptaHighJump.getScore();
+        double heigtLongJump = 648;
+        int choiceOfDiscipline = 6;
+        heptaLongJump.setChoiceOfDiscipline(choiceOfDiscipline);
+        heptaLongJump.calculateScore(heigtLongJump, "hepta");
+
+        double actual = heptaLongJump.getScore();
         System.out.println(actual);
         //assert
         double expected = 1000;
@@ -102,7 +99,7 @@ public class HeptaSubTest {
         double Hepta200Meter = 23.8;
         int choiceOfDiscipline = 2;
         sub.setChoiceOfDiscipline(choiceOfDiscipline);
-        sub.calculateResult(Hepta200Meter, "hepta");
+        sub.calculateScore(Hepta200Meter, "hepta");
 
         double actual = sub.getScore();
         System.out.println(actual);
@@ -121,7 +118,7 @@ public class HeptaSubTest {
         double Hepta800Meters = 127.63;
         int choiceOfDiscipline = 3;
         sub.setChoiceOfDiscipline(choiceOfDiscipline);
-        sub.calculateResult(Hepta800Meters, "hepta");
+        sub.calculateScore(Hepta800Meters, "hepta");
 
         double actual = sub.getScore();
         System.out.println(actual);
@@ -140,7 +137,7 @@ public class HeptaSubTest {
         double Hepta100Meters = 13.85;
         int choiceOfDiscipline = 1;
         sub.setChoiceOfDiscipline(choiceOfDiscipline);
-        sub.calculateResult(Hepta100Meters, "hepta");
+        sub.calculateScore(Hepta100Meters, "hepta");
 
         double actual = sub.getScore();
         System.out.println(actual);
