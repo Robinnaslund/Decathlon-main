@@ -1,16 +1,20 @@
 package common;
 
 import competition.*;
+import excel.ExcelWriter;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 //Denna klass läser in text och skriver ut resultatet
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
+ExcelWriter writer = new ExcelWriter();
+writer.excelWriter();
 
         System.out.println("Welcome");
         System.out.println("******************************************");
