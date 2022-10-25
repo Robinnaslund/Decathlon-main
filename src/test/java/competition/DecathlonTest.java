@@ -1,4 +1,4 @@
-package decathlon;
+package competition;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -6,13 +6,13 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 
-public class TestSubclass {
+public class DecathlonTest {
 
     //Skapar subklassen Deca
     @Test
     public void testChoice() {
         //Arrange
-        DecaSub sub = new DecaSub();
+        Decathlon sub = new Decathlon();
 
         //Act
         sub.setChoiceOfDiscipline(4);
@@ -25,7 +25,7 @@ public class TestSubclass {
     @Test
     public void testUsingSubClassDecaSub() {
         //Arrange
-        DecaSub sub = new DecaSub();
+        Decathlon sub = new Decathlon();
 
         //Act
         double actual = sub.abcValuesForCalculatingScore(0,1);
@@ -40,7 +40,7 @@ public class TestSubclass {
     public void calculateScoreDeca100M(){
 
         //arrange
-        DecaSub deca100 = new DecaSub();
+        Decathlon deca100 = new Decathlon();
 
         //act
         double runningTime100Meters = 11.0;

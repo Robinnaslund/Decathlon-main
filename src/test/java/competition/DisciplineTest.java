@@ -1,10 +1,4 @@
-package decathlon;
-
-import common.CalcTrackAndField;
-import org.junit.Test;
-
-import static java.lang.Double.parseDouble;
-import static org.junit.jupiter.api.Assertions.*;
+package competition;
 
 public class DisciplineTest {
 

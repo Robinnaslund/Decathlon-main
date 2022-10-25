@@ -1,17 +1,17 @@
-package decathlon;
+package competition;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-public class HeptaSubTest {
+public class HeptathlonTest {
 
     @Test
     public void usingHeptahlonSubClass() {
         //Arrange
 
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //Act
         String actual = sub.WhereAmI();
@@ -25,7 +25,7 @@ public class HeptaSubTest {
     public void chooseHeptathlonDiscipline100MHurdles() {
         //Arrange
 
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //Act
         sub.setChoiceOfDiscipline(1);
@@ -38,7 +38,7 @@ public class HeptaSubTest {
     @Test
     public void testUsingSubClassHeptaSub() {
         //Arrange
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //Act
         double actual = sub.abcValuesForCalculatingScore(0, 1);
@@ -54,7 +54,7 @@ public class HeptaSubTest {
     public void calculateScoreHeptaHighJUmp() {
 
         //arrange
-        HeptaSub heptaHighJump = new HeptaSub();
+        Heptathlon heptaHighJump = new Heptathlon();
 
         //act
         double heigtHighJump = 182;
@@ -73,7 +73,7 @@ public class HeptaSubTest {
     public void calculateScoreHeptaLongJump() {
 
         //arrange
-        HeptaSub heptaLongJump = new HeptaSub();
+        Heptathlon heptaLongJump = new Heptathlon();
 
         //act
 
@@ -93,7 +93,7 @@ public class HeptaSubTest {
     public void calculateScoreHepta200M() {
 
         //arrange
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //act
         double Hepta200Meter = 23.8;
@@ -112,7 +112,7 @@ public class HeptaSubTest {
     public void calculateScoreHepta800M() {
 
         //arrange
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //act
         double Hepta800Meters = 127.63;
@@ -131,7 +131,7 @@ public class HeptaSubTest {
     public void calculateScoreHepta100MHUrdles() {
 
         //arrange
-        HeptaSub sub = new HeptaSub();
+        Heptathlon sub = new Heptathlon();
 
         //act
         double Hepta100Meters = 13.85;

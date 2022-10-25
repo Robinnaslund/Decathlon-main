@@ -1,8 +1,8 @@
-package decathlon;
+package competition;
 
-public class HeptaSub extends Discipline {
+public class Heptathlon extends Competition {
 
-    public HeptaSub() {
+    public Heptathlon() {
         calculatingScoreValues = new double[][]{
                 {9.23076, 26.7, 1.835},    //Hep100MHurdles
                 {4.99087, 42.5, 1.81},     //Hep200M

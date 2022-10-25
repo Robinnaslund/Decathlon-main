@@ -1,6 +1,6 @@
 package common;
 
-import decathlon.*;
+import competition.*;
 
 import java.util.Scanner;
 
@@ -23,21 +23,22 @@ public class Main {
         System.out.println("******************************************");
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("PLease type in your choise: ");
-        String menyChoise = scan.nextLine();
-        menyChoise.toLowerCase();
-        Discipline myCompetition= null;
+        String menyChoise = "";
+        Competition myCompetition= null;
 
 
         // while competition = null.
         while (myCompetition == null) {
+            System.out.println("PLease type in your choise: ");
+            menyChoise = scan.nextLine().toLowerCase();
+
             switch (menyChoise) {
 
                 case "deca":
-                    myCompetition = new DecaSub();
+                    myCompetition = new Decathlon();
                     break;
                 case "hepta":
-                    myCompetition = new HeptaSub();
+                    myCompetition = new Heptathlon();
                     break;
                 default:
                     System.out.println("This feature is coming soon");

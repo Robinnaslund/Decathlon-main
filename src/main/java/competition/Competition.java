@@ -1,9 +1,9 @@
-package decathlon;
+package competition;
 
 import common.*;
 
 
-public class Discipline {
+public class Competition {
 
     //Definierar tillstånden/attributen
     public double[][] calculatingScoreValues;

@@ -1,8 +1,8 @@
-package decathlon;
+package competition;
 
 
-public class DecaSub extends Discipline {
-    public DecaSub() {
+public class Decathlon extends Competition {
+    public Decathlon() {
 
         calculatingScoreValues = new double[][]{
                 {25.4347, 18, 1.81},  //Deca100M
