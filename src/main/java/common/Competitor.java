@@ -4,7 +4,7 @@ public class Competitor {
 
 	//Definierar tillstånden/attributen
 	String compName = ""; // tävlandes namn sparad i en String
-	//int[] scores = [];
+	Object [][] CompetitorScoresForAllDisciplines;
 
 	//Lägg till konkurrent
 	//Definierar metoderna

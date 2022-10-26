@@ -1,9 +1,12 @@
 package competition;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+
+import java.util.ArrayList;
 
 public class HeptathlonTest {
 
@@ -145,4 +148,77 @@ public class HeptathlonTest {
         double expected = 1000;
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void saveMultipleScores(){
+
+        Heptathlon myHepta = new Heptathlon();
+
+        int firstScore = 1001;
+        int secondScore = 1238;
+
+        myHepta.addScore(firstScore);
+        myHepta.addScore(secondScore);
+
+        int [] actual = myHepta.getListOfScores();
+
+        int [] expected = {1001, 1238,0,0,0,0};
+
+        assertArrayEquals(expected,actual);
+
+    }
+
+    @Test
+    public void saveScoresForEveryDisciplineInHeptathlon(){
+
+        Heptathlon myHepta = new Heptathlon();
+
+        int score100MHurdles = 1093;
+        int scoreHighJump = 1171;
+        int scoreShotPut = 863;
+        int score200M = 944;
+        int scoreLongJump = 1036;
+        int scoreJavelinThrow = 919;
+        int score800M = 921;
+
+        myHepta.addScore(score100MHurdles);
+        myHepta.addScore(scoreHighJump);
+        myHepta.addScore(scoreShotPut);
+        myHepta.addScore(score200M);
+        myHepta.addScore(scoreLongJump);
+        myHepta.addScore(scoreJavelinThrow);
+        myHepta.addScore(score800M);
+
+        int [] actual = myHepta.getListOfScores();
+
+        int [] expected = {1093, 1171,863,944,1036,919,921};
+
+        assertArrayEquals(expected,actual);
+
+    }
+
+    @Test
+    public void calculateMultipleScores(){
+
+        Heptathlon myHepta = new Heptathlon();
+
+        double longJumpResult = 648;
+        double result100M = 13.85;
+
+        myHepta.setChoiceOfDiscipline(6);
+        myHepta.calculateScore(longJumpResult, "hepta");
+        myHepta.setChoiceOfDiscipline(1);
+        myHepta.calculateScore(result100M, "hepta");
+
+
+
+        int [] actual = myHepta.getListOfScores();
+
+        int [] expected = {1001, 1000,0,0,0,0,0};
+
+        assertArrayEquals(expected,actual);
+
+    }
+
+
 }
