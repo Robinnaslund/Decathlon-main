@@ -54,6 +54,62 @@ public class DecathlonTest {
         double expected = 861;
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void calculateScoreDeca400M(){
+
+        //arrange
+        Decathlon deca400 = new Decathlon();
+
+        //act
+        double runningTime400Meters = 58;
+        int choiceOfDiscipline = 2;
+        deca400.setChoiceOfDiscipline(choiceOfDiscipline);
+        deca400.calculateScore(runningTime400Meters, "deca");
+
+        double actual= deca400.getScore();
+        System.out.println(actual);
+        //assert
+        double expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void calculateScoreDecaDiscus(){
+
+        //arrange
+        Decathlon decaDiscus = new Decathlon();
+
+        //act
+        double FieldDistanceDiscus = 55;
+        int choiceOfDiscipline = 8;
+        decaDiscus.setChoiceOfDiscipline(choiceOfDiscipline);
+        decaDiscus.calculateScore(FieldDistanceDiscus, "deca");
+
+        double actual= decaDiscus.getScore();
+        System.out.println(actual);
+        //assert
+        double expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void calculateScoreDecaShotPut(){
+
+        //arrange
+        Decathlon decaShotPut = new Decathlon();
+
+        //act
+        double FieldDistanceShotPut = 65;
+        int choiceOfDiscipline = 10;
+        decaShotPut.setChoiceOfDiscipline(choiceOfDiscipline);
+        decaShotPut.calculateScore(FieldDistanceShotPut, "deca");
+
+        double actual= decaShotPut.getScore();
+        System.out.println(actual);
+        //assert
+        double expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+
+
 }
 
 
