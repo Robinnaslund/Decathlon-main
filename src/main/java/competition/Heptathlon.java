@@ -4,8 +4,6 @@ public class Heptathlon extends Competition {
 
     public Heptathlon() {
 
-        scoreList = new int[7];
-
         calculatingScoreValues = new double[][]{
                 {9.23076, 26.7, 1.835},    //Hep100MHurdles
                 {4.99087, 42.5, 1.81},     //Hep200M

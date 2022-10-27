@@ -4,8 +4,6 @@ package competition;
 public class Decathlon extends Competition {
     public Decathlon() {
 
-        scoreList = new int[10];
-
         calculatingScoreValues = new double[][]{
                 {25.4347, 18, 1.81},  //Deca100M
                 {5.74352, 28.5, 1.92},  //Deca110MHurdles

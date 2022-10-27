@@ -149,7 +149,7 @@ public class HeptathlonTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
+  /*  @Test
     public void saveMultipleScores(){
 
         Heptathlon myHepta = new Heptathlon();
@@ -220,5 +220,7 @@ public class HeptathlonTest {
 
     }
 
+
+   */
 
 }

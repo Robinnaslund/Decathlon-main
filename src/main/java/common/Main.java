@@ -23,8 +23,8 @@ public class Main {
         System.out.println("******************************************");
         System.out.println("");
         System.out.println("Here are the alternatives for the program: ");
-        System.out.println("1. Decathlon tournament, type in DECA to add competitors and results for Decathlon disciplines.");
-        System.out.println("2. Heptathlon tournament, type in Hepta to add competitors and results for Hepthathlon disciplines.");
+        System.out.println("1. Decathlon tournament, type in deca to add competitors and results for Decathlon disciplines.");
+        System.out.println("2. Heptathlon tournament, type in hepta to add competitors and results for Hepthathlon disciplines.");
         System.out.println("3. Se results for either Decathlon or Heptathlon tournament (coming soon).");
         System.out.println("");
         System.out.println("******************************************");

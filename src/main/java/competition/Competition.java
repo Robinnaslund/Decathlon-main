@@ -8,7 +8,6 @@ public class Competition {
     //Definierar tillstånden/attributen
     public double[][] calculatingScoreValues;
     int score = 0;
-    int[] scoreList; // private int [] scores;
     int choiceOfDiscipline = 0;
 
 
@@ -27,32 +26,31 @@ public class Competition {
         double valueA = calculatingScoreValues[choiceOfDiscipline - 1][0];
         double valueB = calculatingScoreValues[choiceOfDiscipline - 1][1];
         double valueC = calculatingScoreValues[choiceOfDiscipline - 1][2];
-        int calculatedScore = 0;
 
 
         if (competition.toLowerCase().equals("deca")) {
 
             if (choiceOfDiscipline > 0 && choiceOfDiscipline < 5) {
 
-                calculatedScore = calc.calculateTrack(valueA, valueB, valueC, runningTimeOrDistance);
-                addScore(calculatedScore);
+                score = calc.calculateTrack(valueA, valueB, valueC, runningTimeOrDistance);
+
 
             } else {
 
-                calculatedScore = calc.calculateField(valueA, valueB, valueC, runningTimeOrDistance);
-                addScore(calculatedScore);
+                score = calc.calculateField(valueA, valueB, valueC, runningTimeOrDistance);
+
             }
         } else if (competition.equalsIgnoreCase("hepta")) {
 
             if (choiceOfDiscipline > 0 && choiceOfDiscipline < 4) {
 
-                calculatedScore = calc.calculateTrack(valueA, valueB, valueC, runningTimeOrDistance);
-                addScore(calculatedScore);
+                score = calc.calculateTrack(valueA, valueB, valueC, runningTimeOrDistance);
+
 
             } else {
 
-                calculatedScore = calc.calculateField(valueA, valueB, valueC, runningTimeOrDistance);
-                addScore(calculatedScore);
+                score = calc.calculateField(valueA, valueB, valueC, runningTimeOrDistance);
+
 
             }
         }
@@ -65,10 +63,6 @@ public class Competition {
 
     }
 
-    public int[] getListOfScores() {
-
-        return scoreList;
-    }
 
     public void printDisciplines() {
 
@@ -83,15 +77,7 @@ public class Competition {
         return calculatingScoreValues[row][column];
     }
 
-    public void addScore(int calculatedScore) {
 
-        for (int i = 0; i < scoreList.length; i++) {
 
-            if (scoreList[i] == 0) {
-
-                scoreList[i] = calculatedScore;
-                i = scoreList.length;
-            }
-        }
-    }
 }
+
